@@ -2,11 +2,11 @@ import { useEffect, useState } from 'react';
 import './LoadingScreen.css';
 
 const PHRASES = [
-  "Cargando píxeles... uno por uno",
-  "Convenciendo a los fotones de cooperar",
-  "Esto carga más rápido que tu ex respondiendo",
-  "Preparando la esfera... no, no es la tierra plana",
-  "Si fuera más lento, sería una diapositiva",
+  "Loading pixels... one by one",
+  "Convincing photons to cooperate",
+  "This loads faster than your ex replies",
+  "Preparing the sphere... no, it's not flat earth",
+  "If it were any slower, it'd be a slideshow",
 ];
 
 const LoadingScreen = () => {
@@ -38,7 +38,7 @@ const LoadingScreen = () => {
       </div>
 
       <div className="loading-text-section">
-        <span className="loading-label">Cargando</span>
+        <span className="loading-label">Loading</span>
         <p className="loading-phrase" key={phraseIndex}>
           {PHRASES[phraseIndex]}
         </p>
