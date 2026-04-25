@@ -1,4 +1,4 @@
-# 🌐 HDRI Sphere
+# 🌐 HDRIS phere viewer
 
 Interactive 3D panoramic viewer for HDRI / equirectangular images. Built with React, Three.js, and TypeScript.
 
@@ -9,18 +9,18 @@ Interactive 3D panoramic viewer for HDRI / equirectangular images. Built with Re
 
 ## Features
 
-- 🖼️ **360° Panoramic Rendering** — Renders equirectangular images onto a 3D sphere for immersive exploration.
-- 🧭 **Interactive Compass** — Real-time compass with smooth cardinal direction tracking and north offset calibration.
-- 🔍 **Scroll Zoom** — FOV-based zoom control via mouse wheel (30°–100° range).
-- 🎯 **Orbit Controls** — Click and drag to look around with inverted, natural-feeling rotation.
-- ⚡ **Lightweight** — Minimal dependencies, powered by `@react-three/fiber` and `@react-three/drei`.
+- **360° Panoramic Rendering** — Renders equirectangular images onto a 3D sphere for immersive exploration.
+- **Interactive Compass** — Real-time compass with smooth cardinal direction tracking and north offset calibration.
+- **Scroll Zoom** — FOV-based zoom control via mouse wheel (30°–100° range).
+- **Orbit Controls** — Click and drag to look around with inverted, natural-feeling rotation.
+- **Lightweight** — Minimal dependencies, powered by `@react-three/fiber` and `@react-three/drei`.
 
 ## Quick Start
 
 ```bash
 # Clone
-git clone https://github.com/<your-username>/hdri-sphere.git
-cd hdri-sphere
+git clone https://github.com/sebas-gith/hdri-sphere-viewer.git
+cd hdri-sphere-viewer
 
 # Install & run
 npm install
