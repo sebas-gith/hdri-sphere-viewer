@@ -1,8 +1,9 @@
 import { useThree, useFrame } from '@react-three/fiber';
 import { useEffect, useState } from 'react';
+import { PerspectiveCamera } from 'three';
 
 const ZoomControl = () => {
-  const { camera } = useThree();
+  const { camera } = useThree() as { camera: PerspectiveCamera };
 
   const [fov, setFov] = useState(75);
 
