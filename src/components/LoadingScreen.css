@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(ellipse at 50% 0%, #1a1a2e 0%, #0a0a0f 100%);
+  font-family: 'Inter', sans-serif;
+  color: #e0e0e0;
+  gap: 2.5rem;
+  overflow: hidden;
+}
+
+/* Ambient floating particles */
+.loading-screen::before,
+.loading-screen::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.15;
+  animation: float 8s ease-in-out infinite;
+}
+
+.loading-screen::before {
+  width: 400px;
+  height: 400px;
+  background: #6c63ff;
+  top: -100px;
+  left: -100px;
+}
+
+.loading-screen::after {
+  width: 300px;
+  height: 300px;
+  background: #00d4ff;
+  bottom: -80px;
+  right: -80px;
+  animation-delay: -4s;
+  animation-direction: reverse;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(30px, -20px) scale(1.1); }
+}
+
+/* Sphere spinner */
+.spinner-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.spinner-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid transparent;
+}
+
+.spinner-ring:nth-child(1) {
+  border-top-color: #6c63ff;
+  animation: spin 1.5s linear infinite;
+}
+
+.spinner-ring:nth-child(2) {
+  inset: 8px;
+  border-right-color: #00d4ff;
+  animation: spin 2s linear infinite reverse;
+}
+
+.spinner-ring:nth-child(3) {
+  inset: 16px;
+  border-bottom-color: #ff6b9d;
+  animation: spin 2.5s linear infinite;
+}
+
+.spinner-core {
+  position: absolute;
+  inset: 28px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #6c63ff44, transparent);
+  animation: pulse-core 2s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse-core {
+  0%, 100% { opacity: 0.4; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+/* Text section */
+.loading-text-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.loading-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #888;
+}
+
+/* Funny phrase */
+.loading-phrase {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #aaa;
+  font-style: italic;
+  min-height: 1.5em;
+  text-align: center;
+  max-width: 360px;
+  animation: fade-phrase 0.5s ease-in-out;
+}
+
+@keyframes fade-phrase {
+  0% { opacity: 0; transform: translateY(6px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Progress bar */
+.progress-track {
+  width: 220px;
+  height: 3px;
+  background: #ffffff0a;
+  border-radius: 99px;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 99px;
+  background: linear-gradient(90deg, #6c63ff, #00d4ff);
+  animation: indeterminate 1.8s ease-in-out infinite;
+  transform-origin: left;
+}
+
+@keyframes indeterminate {
+  0% { transform: scaleX(0) translateX(0); }
+  50% { transform: scaleX(0.6) translateX(40%); }
+  100% { transform: scaleX(0) translateX(220px); }
+}
+
+/* GitHub link */
+.loading-github {
+  position: absolute;
+  bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: #555;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.loading-github:hover {
+  color: #aaa;
+}
+
+.loading-github svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  transition: transform 0.3s ease;
+}
+
+.loading-github:hover svg {
+  transform: scale(1.15);
+}

@@ -1,4 +1,4 @@
-# 🌐 HDRIS phere viewer
+# 🌐 HDRIS sphere viewer
 
 Interactive 3D panoramic viewer for HDRI / equirectangular images. Built with React, Three.js, and TypeScript.
 
